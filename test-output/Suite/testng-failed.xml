@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="com.api.ApiTestProject.ApiTest">
+        <methods>
+          <include name="postRequest" invocation-numbers="0"/>
+          <include name="endReport"/>
+          <include name="welcome"/>
+          <include name="startReport"/>
+          <include name="getResult"/>
+        </methods>
+      </class> <!-- com.api.ApiTestProject.ApiTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

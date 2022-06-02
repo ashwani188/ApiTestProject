@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="30431" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:54 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="30431" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:54 IST">
+      <class name="com.api.ApiTestProject.UiTest">
+        <test-method status="PASS" signature="welcomeUiTest()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="welcomeUiTest" is-config="true" duration-ms="305" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- welcomeUiTest -->
+        <test-method status="PASS" signature="intializeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="intializeBrowser" is-config="true" duration-ms="13372" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeBrowser -->
+        <test-method status="PASS" signature="intializeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="intializeBrowser" is-config="true" duration-ms="13384" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeBrowser -->
+        <test-method status="PASS" signature="intializeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="intializeBrowser" is-config="true" duration-ms="13379" started-at="2022-06-02T16:54:23 IST" finished-at="2022-06-02T16:54:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeBrowser -->
+        <test-method status="PASS" signature="launchDriver()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="launchDriver" duration-ms="15662" started-at="2022-06-02T16:54:37 IST" finished-at="2022-06-02T16:54:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchDriver -->
+        <test-method status="PASS" signature="launchDriver3()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="launchDriver3" duration-ms="15683" started-at="2022-06-02T16:54:37 IST" finished-at="2022-06-02T16:54:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchDriver3 -->
+        <test-method status="PASS" signature="launchDriver2()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="launchDriver2" duration-ms="15663" started-at="2022-06-02T16:54:37 IST" finished-at="2022-06-02T16:54:52 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchDriver2 -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="closeBrowser" is-config="true" duration-ms="1306" started-at="2022-06-02T16:54:52 IST" finished-at="2022-06-02T16:54:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="closeBrowser" is-config="true" duration-ms="689" started-at="2022-06-02T16:54:52 IST" finished-at="2022-06-02T16:54:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="closeBrowser" is-config="true" duration-ms="1200" started-at="2022-06-02T16:54:52 IST" finished-at="2022-06-02T16:54:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.api.ApiTestProject.UiTest@545997b1]" name="endReport" is-config="true" duration-ms="571" started-at="2022-06-02T16:54:54 IST" finished-at="2022-06-02T16:54:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.api.ApiTestProject.UiTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
