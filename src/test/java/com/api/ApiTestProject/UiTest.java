@@ -1,9 +1,15 @@
 package com.api.ApiTestProject;
 
+import java.net.MalformedURLException;
+
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -11,7 +17,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class UiTest {
-//	WebDriver driver;
+	WebDriver driver;
 	BaseClass baseObj;
 	ExtentUtility extUtils;
 	ExtentReports extent;
@@ -24,8 +30,14 @@ public class UiTest {
 		extent = extUtils.startReport();
 	}
 
-	@BeforeMethod
-	public void intializeBrowser() {
+	@Parameters("browser")
+	@BeforeTest
+	public void intializeRemoteBrowser(String browserType) throws MalformedURLException {
+		driver = BaseClass.intializeRemoteBrowser(browserType);
+	}
+
+//	@BeforeMethod
+//	public void intializeBrowser(String browserType) {
 //		try {
 //			driver= BrowserStacBaseClass.intializeBrowser();
 //		} catch (InterruptedException e) {
@@ -37,47 +49,75 @@ public class UiTest {
 //		}
 
 //		driver= BaseClass.intializeBrowserStack();
-		BaseClass.intializeBrowser();
+//		BaseClass.intializeBrowser();
 //		driver = BaseClass.getDriver();
 
-	}
+//	}
 
 	@Test
 	public void launchDriver() throws InterruptedException {
-		BaseClass.getDriver().get("https://www.youtube.com");
+//		BaseClass.getDriver().get("https://www.youtube.com");
+//		logger = extent.startTest("Launching YOUTUBE");
+//		CoreUtils.maximizeWin(BaseClass.getDriver());
+//		System.out.println("launch youtube");
+//		System.out.println(Thread.currentThread().getId());
+//		logger.log(LogStatus.PASS, "Youtube Passed");
+//		BaseClass.getDriver().manage().deleteAllCookies();
+
+		driver.get("https://www.youtube.com");
 		logger = extent.startTest("Launching YOUTUBE");
-		CoreUtils.maximizeWin(BaseClass.getDriver());
+		CoreUtils.maximizeWin(driver);
 		System.out.println("launch youtube");
 		System.out.println(Thread.currentThread().getId());
 		logger.log(LogStatus.PASS, "Youtube Passed");
-		BaseClass.getDriver().manage().deleteAllCookies();
 	}
 
 	@Test
 	public void launchDriver2() {
-		BaseClass.getDriver().get("https://www.facebook.com");
+//		BaseClass.getDriver().get("https://www.facebook.com");
+//		logger = extent.startTest("Launching  FACEBOOK");
+//		CoreUtils.maximizeWin(BaseClass.getDriver());
+//		System.out.println("launch facebook");
+//		System.out.println(Thread.currentThread().getId());
+//		logger.log(LogStatus.PASS, "Facebook Passed");
+//		BaseClass.getDriver().manage().deleteAllCookies();
+
+		driver.get("https://www.facebook.com");
 		logger = extent.startTest("Launching  FACEBOOK");
-		CoreUtils.maximizeWin(BaseClass.getDriver());
+		CoreUtils.maximizeWin(driver);
 		System.out.println("launch facebook");
 		System.out.println(Thread.currentThread().getId());
 		logger.log(LogStatus.PASS, "Facebook Passed");
-		BaseClass.getDriver().manage().deleteAllCookies();
 	}
 
-	@Test
+	@Test (enabled = false)
 	public void launchDriver3() {
-		BaseClass.getDriver().get("https://www.google.com");
+//		BaseClass.getDriver().get("https://www.google.com");
+//		logger = extent.startTest("Launching GOOGLE");
+//		CoreUtils.maximizeWin(BaseClass.getDriver());
+//		System.out.println("launch google");
+//		System.out.println(Thread.currentThread().getId());
+//		logger.log(LogStatus.PASS, "Google Passed");
+//		BaseClass.getDriver().manage().deleteAllCookies();
+
+		driver.get("https://www.google.com");
 		logger = extent.startTest("Launching GOOGLE");
-		CoreUtils.maximizeWin(BaseClass.getDriver());
+		CoreUtils.maximizeWin(driver);
 		System.out.println("launch google");
 		System.out.println(Thread.currentThread().getId());
 		logger.log(LogStatus.PASS, "Google Passed");
-		BaseClass.getDriver().manage().deleteAllCookies();
 	}
 
-	@AfterMethod
-	public void closeBrowser() {
-		BaseClass.closeBrowser();
+//	@AfterMethod
+//	public void closeBrowser() {
+//		BaseClass.closeBrowser();
+//	}
+	
+	@AfterTest
+	public void closeRemoteBrowser()
+	{
+		System.out.println("###############TEST CASES EXECUTION ENDED###############");
+		driver.quit();
 	}
 
 	@AfterSuite

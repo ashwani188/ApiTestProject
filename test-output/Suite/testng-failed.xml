@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="2" name="Test2(failed)" parallel="tests">
+    <parameter name="browser" value="FIREFOX"/>
     <classes>
-      <class name="com.api.ApiTestProject.ApiTest">
+      <class name="com.api.ApiTestProject.UiTest">
         <methods>
-          <include name="postRequest" invocation-numbers="0"/>
+          <include name="intializeRemoteBrowser"/>
+          <include name="welcomeUiTest"/>
+          <include name="closeRemoteBrowser"/>
+          <include name="launchDriver2"/>
           <include name="endReport"/>
-          <include name="welcome"/>
-          <include name="startReport"/>
-          <include name="getResult"/>
         </methods>
-      </class> <!-- com.api.ApiTestProject.ApiTest -->
+      </class> <!-- com.api.ApiTestProject.UiTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test2(failed) -->
+  <test thread-count="2" name="Test1(failed)" parallel="tests">
+    <parameter name="browser" value="CHROME"/>
+    <classes>
+      <class name="com.api.ApiTestProject.UiTest">
+        <methods>
+          <include name="launchDriver"/>
+          <include name="intializeRemoteBrowser"/>
+          <include name="welcomeUiTest"/>
+          <include name="closeRemoteBrowser"/>
+          <include name="endReport"/>
+        </methods>
+      </class> <!-- com.api.ApiTestProject.UiTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->
