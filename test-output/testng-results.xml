@@ -1,13 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="4" total="6" passed="1">
+<testng-results skipped="0" failed="1" ignored="2" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="GRIDSuite" duration-ms="118019" started-at="2022-07-12T16:27:42 IST" finished-at="2022-07-12T16:29:40 IST">
+  <suite name="GRIDSuite" duration-ms="89849" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:55:21 IST">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="113758" started-at="2022-07-12T16:27:42 IST" finished-at="2022-07-12T16:29:36 IST">
+    <test name="Test2" duration-ms="87930" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:55:19 IST">
       <class name="com.api.ApiTestProject.UiTest">
-        <test-method status="PASS" signature="intializeRemoteBrowser(java.lang.String)[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="intializeRemoteBrowser" is-config="true" duration-ms="58872" started-at="2022-07-12T16:27:42 IST" finished-at="2022-07-12T16:28:41 IST">
+        <test-method status="PASS" signature="welcomeUiTest()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="welcomeUiTest" is-config="true" duration-ms="518" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:53:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- welcomeUiTest -->
+        <test-method status="PASS" signature="intializeRemoteBrowser(java.lang.String)[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="intializeRemoteBrowser" is-config="true" duration-ms="62234" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:54:54 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[FIREFOX]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intializeRemoteBrowser -->
+        <test-method status="PASS" signature="launchBrowserFirefox()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="launchBrowserFirefox" duration-ms="18391" started-at="2022-07-15T18:54:54 IST" finished-at="2022-07-15T18:55:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowserFirefox -->
+        <test-method status="PASS" signature="closeRemoteBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="closeRemoteBrowser" is-config="true" duration-ms="7252" started-at="2022-07-15T18:55:12 IST" finished-at="2022-07-15T18:55:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeRemoteBrowser -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="endReport" is-config="true" duration-ms="1509" started-at="2022-07-15T18:55:22 IST" finished-at="2022-07-15T18:55:23 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.api.ApiTestProject.UiTest -->
+    </test> <!-- Test2 -->
+    <test name="Test1" duration-ms="89849" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:55:21 IST">
+      <class name="com.api.ApiTestProject.UiTest">
+        <test-method status="PASS" signature="intializeRemoteBrowser(java.lang.String)[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="intializeRemoteBrowser" is-config="true" duration-ms="49089" started-at="2022-07-15T18:53:51 IST" finished-at="2022-07-15T18:54:40 IST">
           <params>
             <param index="0">
               <value>
@@ -18,11 +49,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- intializeRemoteBrowser -->
-        <test-method status="FAIL" signature="launchDriver()[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="launchDriver" duration-ms="47195" started-at="2022-07-12T16:28:41 IST" finished-at="2022-07-12T16:29:28 IST">
+        <test-method status="FAIL" signature="launchBrowserChrome()[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="launchBrowserChrome" duration-ms="37639" started-at="2022-07-15T18:54:41 IST" finished-at="2022-07-15T18:55:18 IST">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at com.api.ApiTestProject.UiTest.launchDriver(UiTest.java:68)
+at com.api.ApiTestProject.UiTest.launchBrowserChrome(UiTest.java:61)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -51,43 +82,12 @@ at java.lang.Thread.run(Thread.java:748)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- launchDriver -->
-        <test-method status="PASS" signature="closeRemoteBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="closeRemoteBrowser" is-config="true" duration-ms="7040" started-at="2022-07-12T16:29:29 IST" finished-at="2022-07-12T16:29:36 IST">
+        </test-method> <!-- launchBrowserChrome -->
+        <test-method status="PASS" signature="closeRemoteBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@df27fae]" name="closeRemoteBrowser" is-config="true" duration-ms="2949" started-at="2022-07-15T18:55:18 IST" finished-at="2022-07-15T18:55:21 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeRemoteBrowser -->
       </class> <!-- com.api.ApiTestProject.UiTest -->
     </test> <!-- Test1 -->
-    <test name="Test2" duration-ms="118017" started-at="2022-07-12T16:27:42 IST" finished-at="2022-07-12T16:29:40 IST">
-      <class name="com.api.ApiTestProject.UiTest">
-        <test-method status="PASS" signature="welcomeUiTest()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="welcomeUiTest" is-config="true" duration-ms="1269" started-at="2022-07-12T16:27:41 IST" finished-at="2022-07-12T16:27:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- welcomeUiTest -->
-        <test-method status="PASS" signature="intializeRemoteBrowser(java.lang.String)[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="intializeRemoteBrowser" is-config="true" duration-ms="74257" started-at="2022-07-12T16:27:42 IST" finished-at="2022-07-12T16:28:56 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[FIREFOX]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- intializeRemoteBrowser -->
-        <test-method status="PASS" signature="launchDriver2()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="launchDriver2" duration-ms="36751" started-at="2022-07-12T16:28:56 IST" finished-at="2022-07-12T16:29:33 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchDriver2 -->
-        <test-method status="PASS" signature="closeRemoteBrowser()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="closeRemoteBrowser" is-config="true" duration-ms="6973" started-at="2022-07-12T16:29:33 IST" finished-at="2022-07-12T16:29:40 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeRemoteBrowser -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.api.ApiTestProject.UiTest@73d4cc9e]" name="endReport" is-config="true" duration-ms="1789" started-at="2022-07-12T16:29:40 IST" finished-at="2022-07-12T16:29:42 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endReport -->
-      </class> <!-- com.api.ApiTestProject.UiTest -->
-    </test> <!-- Test2 -->
   </suite> <!-- GRIDSuite -->
 </testng-results>

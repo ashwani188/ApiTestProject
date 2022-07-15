@@ -6,7 +6,7 @@
     <classes>
       <class name="com.api.ApiTestProject.UiTest">
         <methods>
-          <include name="launchDriver"/>
+          <include name="launchBrowserChrome"/>
           <include name="intializeRemoteBrowser"/>
           <include name="welcomeUiTest"/>
           <include name="closeRemoteBrowser"/>

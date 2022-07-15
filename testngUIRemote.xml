@@ -7,7 +7,7 @@
 		<classes>
 			<class name="com.api.ApiTestProject.UiTest">
 				<methods>
-					<include name="launchDriver" />
+					<include name="launchBrowserChrome" />
 				</methods>
 			</class>
 		</classes>
@@ -18,7 +18,7 @@
 		<classes>
 			<class name="com.api.ApiTestProject.UiTest">
 				<methods>
-					<include name="launchDriver2" />
+					<include name="launchBrowserFirefox" />
 				</methods>
 			</class>
 		</classes>

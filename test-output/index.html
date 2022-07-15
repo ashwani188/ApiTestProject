@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-GRIDSuite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-GRIDSuite" title="com.api.ApiTestProject.UiTest" hash-for-method="launchDriver">launchDriver</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-GRIDSuite" title="com.api.ApiTestProject.UiTest" hash-for-method="launchBrowserChrome">launchBrowserChrome</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-GRIDSuite -->
@@ -118,7 +118,7 @@
                     <div class="method-list-content passed suite-GRIDSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-GRIDSuite" title="com.api.ApiTestProject.UiTest" hash-for-method="launchDriver2">launchDriver2</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-GRIDSuite" title="com.api.ApiTestProject.UiTest" hash-for-method="launchBrowserFirefox">launchBrowserFirefox</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-GRIDSuite -->
@@ -141,11 +141,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="launchDriver">
-                  </a> <!-- launchDriver -->
-                  <span class="method-name">launchDriver</span>
+                  <a name="launchBrowserChrome">
+                  </a> <!-- launchBrowserChrome -->
+                  <span class="method-name">launchBrowserChrome</span>
                   <div class="stack-trace">java.lang.NullPointerException
-	at com.api.ApiTestProject.UiTest.launchDriver(UiTest.java:68)
+	at com.api.ApiTestProject.UiTest.launchBrowserChrome(UiTest.java:61)
 	at java.util.ArrayList.forEach(ArrayList.java:1249)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
@@ -165,9 +165,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="launchDriver2">
-                  </a> <!-- launchDriver2 -->
-                  <span class="method-name">launchDriver2</span>
+                  <a name="launchBrowserFirefox">
+                  </a> <!-- launchBrowserFirefox -->
+                  <span class="method-name">launchBrowserFirefox</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,7 +187,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.api.ApiTestProject.UiTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;launchDriver&quot;/&gt;
+          &lt;include name=&quot;launchBrowserChrome&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.api.ApiTestProject.UiTest --&gt;
     &lt;/classes&gt;
@@ -197,7 +197,7 @@
     &lt;classes&gt;
       &lt;class name=&quot;com.api.ApiTestProject.UiTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;launchDriver2&quot;/&gt;
+          &lt;include name=&quot;launchBrowserFirefox&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.api.ApiTestProject.UiTest --&gt;
     &lt;/classes&gt;
@@ -244,13 +244,13 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'launchDriver')
+data.setCell(0, 1, 'launchBrowserChrome')
 data.setCell(0, 2, 'com.api.ApiTestProject.UiTest')
-data.setCell(0, 3, 47195);
+data.setCell(0, 3, 37639);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'launchDriver2')
+data.setCell(1, 1, 'launchBrowserFirefox')
 data.setCell(1, 2, 'com.api.ApiTestProject.UiTest')
-data.setCell(1, 3, 36751);
+data.setCell(1, 3, 18391);
 window.suiteTableData['GRIDSuite']= { tableData: data, tableDiv: 'times-div-GRIDSuite'}
 return data;
 }
@@ -270,19 +270,15 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-GRIDSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.api.ApiTestProject.UiTest</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">launchDriver</span>
+                <span class="ignored-method-name">launchBrowserChrome</span>
                 <br/>
-                <span class="ignored-method-name">launchDriver3</span>
-                <br/>
-                <span class="ignored-method-name">launchDriver3</span>
-                <br/>
-                <span class="ignored-method-name">launchDriver2</span>
+                <span class="ignored-method-name">launchBrowserFirefox</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -301,33 +297,33 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">intializeRemoteBrowser(CHROME)</span>
-                <span class="method-start">1317 ms</span>
+                <span class="method-start">539 ms</span>
               </div> <!-- configuration-test before -->
               <div class="configuration-test before">
                 <span class="method-name">intializeRemoteBrowser(FIREFOX)</span>
-                <span class="method-start">1331 ms</span>
+                <span class="method-start">541 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">launchDriver</span>
-                <span class="method-start">60406 ms</span>
+                <span class="method-name">launchBrowserChrome</span>
+                <span class="method-start">49762 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">launchDriver2</span>
-                <span class="method-start">75601 ms</span>
+                <span class="method-name">launchBrowserFirefox</span>
+                <span class="method-start">62779 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">closeRemoteBrowser</span>
-                <span class="method-start">108027 ms</span>
+                <span class="method-start">81211 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-test after">
                 <span class="method-name">closeRemoteBrowser</span>
-                <span class="method-start">112356 ms</span>
+                <span class="method-start">87434 ms</span>
               </div> <!-- configuration-test after -->
               <div class="configuration-suite after">
                 <span class="method-name">endReport</span>
-                <span class="method-start">119373 ms</span>
+                <span class="method-start">90815 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -33,7 +33,7 @@ public class UiTest {
 	@Parameters("browser")
 	@BeforeTest
 	public void intializeRemoteBrowser(String browserType) throws MalformedURLException {
-		driver = BaseClass.intializeRemoteBrowser(browserType);
+		BaseClass.intializeRemoteBrowser(browserType);
 	}
 
 //	@BeforeMethod
@@ -55,38 +55,38 @@ public class UiTest {
 //	}
 
 	@Test
-	public void launchDriver() throws InterruptedException {
-//		BaseClass.getDriver().get("https://www.youtube.com");
-//		BaseClass.getDriver().manage().deleteAllCookies();
-
-		driver.get("https://www.youtube.com");
+	public void launchBrowserChrome() throws InterruptedException {
+		BaseClass.getDriver().get("https://www.youtube.com");
+		Thread.sleep(100);
 		logger = extent.startTest("Launching YOUTUBE");
-		CoreUtils.maximizeWin(driver);
+		CoreUtils.maximizeWin(BaseClass.getDriver());
 		System.out.println("launch youtube");
 		System.out.println(Thread.currentThread().getId());
 		logger.log(LogStatus.PASS, "Youtube Passed");
+		BaseClass.getDriver().manage().deleteAllCookies();
 	}
 
 	@Test
-	public void launchDriver2() {
-		driver.get("https://www.facebook.com");
+	public void launchBrowserFirefox() throws InterruptedException {
+		BaseClass.getDriver().get("https://www.facebook.com");
+		Thread.sleep(100);
 		logger = extent.startTest("Launching  FACEBOOK");
-		CoreUtils.maximizeWin(driver);
+		CoreUtils.maximizeWin(BaseClass.getDriver());
 		System.out.println("launch facebook");
 		System.out.println(Thread.currentThread().getId());
-		logger.log(LogStatus.PASS, "Facebook Passed");
+		logger.log(LogStatus.PASS, "Facebook Passed");	
+		BaseClass.getDriver().manage().deleteAllCookies();
 	}
 
 //	@AfterMethod
 //	public void closeBrowser() {
 //		BaseClass.closeBrowser();
 //	}
-	
+
 	@AfterTest
-	public void closeRemoteBrowser()
-	{
+	public void closeRemoteBrowser() {
 		System.out.println("###############TEST CASES EXECUTION ENDED###############");
-		driver.quit();
+		BaseClass.closeBrowser();
 	}
 
 	@AfterSuite

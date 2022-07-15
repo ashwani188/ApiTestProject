@@ -25,7 +25,6 @@ public class BaseClass {
 	public static final String SECRATE_KEY = "ap7E9QypmPSy5jizTrvc";
 	public static final String URL = "https://" + USERNAME + ":" + SECRATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<WebDriver>();
-	private static WebDriver driverRemot = null;
 
 	public BaseClass() {
 		String log4jpath = System.getProperty("user.dir") + "/src/main/resources/log4j.properties";
@@ -80,19 +79,21 @@ public class BaseClass {
 		logger.info("----------------------Closed Chrome Browser----------------------");
 	}
 
-	public static WebDriver intializeRemoteBrowser(String browserType) throws MalformedURLException {
+	public static void intializeRemoteBrowser(String browserType) throws MalformedURLException {
 		DesiredCapabilities cap = new DesiredCapabilities();
 		if (browserType.equalsIgnoreCase("chrome")) {
 			cap.setBrowserName(BrowserType.CHROME);
+			WebDriverManager.chromiumdriver().setup();
 			System.out.println("########### TEST CASE EXECUTION STARTED ON ==>" + browserType);
 		}
 
 		else if (browserType.equalsIgnoreCase("firefox")) {
 			cap.setBrowserName(BrowserType.FIREFOX);
+			WebDriverManager.firefoxdriver().setup();
 			System.out.println("########### TEST CASE EXECUTION STARTED ON ==>" + browserType);
 		}
 
-		return driverRemot= new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),cap);
+		driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
 	}
 
 }
