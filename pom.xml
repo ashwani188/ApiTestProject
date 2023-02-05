@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.5</version>
+			<version>7.6.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -136,7 +136,6 @@
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-						<suiteXmlFile>testngUI.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
