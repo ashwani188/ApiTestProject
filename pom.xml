@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>${encoding}</project.build.sourceEncoding>
         <project.reporting.outputEncoding>${encoding}</project.reporting.outputEncoding>
         <project.resources.sourceEncoding>${encoding}</project.resources.sourceEncoding>
-        <archetype.encoding>${encoding}</archetype.encoding>
+    <archetype.encoding>${encoding}</archetype.encoding>
 	</properties>
 
 	<dependencies>
@@ -114,7 +114,7 @@
         <dependency>
            <groupId>org.apache.maven.plugins</groupId>
            <artifactId>maven-resources-plugin</artifactId>
-           <version>3.3.0</version>
+           <version>3.3.1</version>
         </dependency>
 
 	</dependencies>
@@ -151,13 +151,13 @@
     </configuration>
 </plugin>
 <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>3.3.1</version>
-        <configuration>
-          <propertiesEncoding>ISO-8859-1</propertiesEncoding>
-        </configuration>
-      </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>3.3.1</version>
+    <configuration>
+        <encoding>UTF-8</encoding>
+    </configuration>
+</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
