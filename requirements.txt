@@ -1,0 +1,7 @@
+pytest
+selenium
+pytest-html
+requests
+pytest-xdist
+
+

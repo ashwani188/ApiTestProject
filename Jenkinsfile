@@ -30,7 +30,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh '. venv/bin/activate && pytest --maxfail=1 --disable-warnings --html=report.html --self-contained-html'
+                sh '. venv/bin/activate && pytest SeleniumDemo/test_Class.py --maxfail=1 --disable-warnings --html=report.html --self-contained-html'
             }
         }
     }
