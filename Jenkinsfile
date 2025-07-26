@@ -40,9 +40,11 @@ pipeline {
             emailext(
                 subject: "Jenkins Build: ${env.JOB_NAME} #${env.BUILD_NUMBER} - ${currentBuild.currentResult}",
                 body: "Build completed. Please find the attached test execution report.<br><br>Job: ${env.JOB_NAME}<br>Build: #${env.BUILD_NUMBER}<br>Status: ${currentBuild.currentResult}",
+                mimeType: 'text/html',
                 to: 'k.ashwani16@gmail.com',
+                replyTo: 'noreply@yourdomain.com',
                 attachLog: false,
-                attachmentsPattern: 'report.html'
+                attachmentsPattern: '**/report.html'
             )
         }
     }
