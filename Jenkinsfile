@@ -5,6 +5,10 @@ pipeline {
         PYTHONPATH = '.'
     }
 
+    triggers {
+        cron('H H * * 0')
+    }
+
     stages {
         stage('Checkout') {
             steps {
