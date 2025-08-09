@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        dockerfile true
-    }
+    agent any
 
     environment {
         PYTHONPATH = '.'
@@ -34,6 +32,22 @@ pipeline {
                 }
             }
         }
+
+        stages {
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    dockerImage = docker.build("my-git-image")
+                }
+            }
+        }
+        stage('Run Container and Verify Git') {
+            steps {
+                script {
+                    sh "docker run ${dockerImage.id} git --version"
+                }
+            }
+        }
         stage('Run Tests') {
             steps {
                 sh '. venv/bin/activate && pytest SeleniumDemo/test_Class.py --maxfail=1 --disable-warnings --html=report.html --self-contained-html'
@@ -44,13 +58,6 @@ pipeline {
                 script {
                     sh 'docker build -t my-python-app -f Dockerfile .'
                 }
-            }
-        }
-        stage('Verify Git Installation') {
-            steps {
-                sh 'git --version'
-            }
-        }
     }
     post {
         always {
