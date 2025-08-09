@@ -37,6 +37,13 @@ pipeline {
                 sh '. venv/bin/activate && pytest SeleniumDemo/test_Class.py --maxfail=1 --disable-warnings --html=report.html --self-contained-html'
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh 'docker build -t my-python-app -f Dockerfile .'
+                }
+            }
+        }
     }
     post {
         always {
