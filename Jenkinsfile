@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    dockerfile true
 
     environment {
         PYTHONPATH = '.'
