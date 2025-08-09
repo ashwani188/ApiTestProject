@@ -44,6 +44,11 @@ pipeline {
                 }
             }
         }
+        stage('Verify Git Installation') {
+            steps {
+                sh 'git --version'
+            }
+        }
     }
     post {
         always {
