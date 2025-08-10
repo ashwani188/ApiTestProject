@@ -1,19 +1,14 @@
-# Use official Python image as base
-FROM python:3.10-slim
+# Start from official Jenkins LTS image
+FROM jenkins/jenkins:lts
 
-# Install git
-RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+# Switch to root to install packages
+USER root
 
-# Set working directory
-WORKDIR /app
+# Install Git and clean up
+RUN apt-get update && \
+    apt-get install -y git && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install dependencies
-COPY requirements.txt ./
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
-
-# Copy the rest of the application code
-COPY . .
-
-# Default command (can be overridden)
-CMD ["pytest"]
+# Switch back to Jenkins user
+USER jenkins
