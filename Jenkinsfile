@@ -58,7 +58,8 @@ pipeline {
                 script {
                     sh 'docker build -t my-python-app -f Dockerfile .'
                 }
-    }
+            }
+        }
     post {
         always {
             archiveArtifacts artifacts: 'report.html', allowEmptyArchive: true
