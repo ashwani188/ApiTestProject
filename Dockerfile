@@ -1,14 +1,19 @@
-# Start from official Jenkins LTS image
-FROM jenkins/jenkins:lts
+# Use official Python image as base
+FROM python:3.10-slim
 
-# Switch to root to install packages
-USER root
+# Install git
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
 
-# Install Git and Docker CLI, then clean up
-RUN apt-get update && \
-    apt-get install -y git docker.io && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+# Set working directory
+WORKDIR /app
 
-# Switch back to Jenkins user
-USER jenkins
+# Copy requirements and install dependencies
+COPY requirements.txt ./
+RUN pip install --upgrade pip && \
+    pip install -r requirements.txt
+
+# Copy the rest of the application code
+COPY . .
+
+# Default command to run your main script (example: test_Class.py)
+CMD ["python", "SeleniumDemo/test_Class.py"]
