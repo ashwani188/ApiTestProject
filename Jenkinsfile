@@ -15,6 +15,20 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh 'docker build -t my-python-app -f Dockerfile .'
+                }
+            }
+        }
+        stage('Run Container and Verify Git') {
+            steps {
+                script {
+                    sh 'docker run my-python-app git --version'
+                }
+            }
+        }
         stage('Set up Python') {
             steps {
                 sh 'python3 -m venv venv'
@@ -32,34 +46,12 @@ pipeline {
                 }
             }
         }
-
-        stages {
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    dockerImage = docker.build("my-git-image")
-                }
-            }
-        }
-        stage('Run Container and Verify Git') {
-            steps {
-                script {
-                    sh "docker run ${dockerImage.id} git --version"
-                }
-            }
-        }
         stage('Run Tests') {
             steps {
                 sh '. venv/bin/activate && pytest SeleniumDemo/test_Class.py --maxfail=1 --disable-warnings --html=report.html --self-contained-html'
             }
         }
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    sh 'docker build -t my-python-app -f Dockerfile .'
-                }
-            }
-        }
+    }
     post {
         always {
             archiveArtifacts artifacts: 'report.html', allowEmptyArchive: true
