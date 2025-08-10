@@ -18,7 +18,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t my-python-app -f Dockerfile .'
+                    sh 'docker build -t my-python-app -f Dockerfile /Users/ashwani/PycharmProjects/PythonProject'
                 }
             }
         }
