@@ -1,0 +1,12 @@
+Project Atlas: Cloud Migration & Disaster Recovery Specification
+
+1. Infrastructure Overview
+Project Atlas operates entirely within Amazon Web Services (AWS) using a multi-region active-passive architecture deployed across the `us-east-1` (Primary) and `us-west-2` (Secondary) regions. All core application microservices run inside Amazon Elastic Kubernetes Service (EKS).
+
+2. Database and Storage Layer
+- Primary Database: Amazon Aurora PostgreSQL (Multi-AZ deployment with 2 read replicas).
+- Object Storage: Amazon S3 buckets configured with cross-region replication (CRR) pointing from `us-east-1` to `us-west-2`. Lifecycle rules transition data to Glacier Flexible Archive after 90 days.
+
+3. Disaster Recovery (DR) RTO and RPO Targets
+- Recovery Time Objective (RTO): In the event of a catastrophic failure in the primary region, automated Route 53 DNS failover must redirect traffic to the secondary region within 15 minutes.
+- Recovery Point Objective (RPO): Database replication lag must not exceed 30 seconds under normal operational load. Data loss window during an ungraceful failover must remain under 1 minute.

@@ -1,0 +1,13 @@
+Apex Technologies Q4 2025 Financial Summary
+
+1. Executive Summary
+Apex Technologies closed Q4 2025 with total consolidated revenue of $42.8 million, representing a 14% year-over-year increase compared to Q4 2024. Growth was primarily driven by strong enterprise adoption of our cloud analytics platform.
+
+2. Segment Performance
+- Software-as-a-Service (SaaS): Generated $31.2 million, accounting for roughly 73% of total revenue. Net Revenue Retention (NRR) for enterprise clients stood at 118%.
+- Professional Services & Consulting: Generated $11.6 million, up 4% sequentially from Q3 2025. Gross margins for this segment contracted by 2.5 percentage points due to increased contractor costs.
+
+3. Operating Expenses & Profitability
+- Research and Development (R&D): Totaled $14.1 million, reflecting heavy continued investment in generative AI security features.
+- Sales and Marketing (S&M): Totaled $15.3 million.
+- Net Income: The company reported a GAAP net income of $3.4 million, turning profitable for the third consecutive quarter.
