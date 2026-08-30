@@ -3,4 +3,5 @@
 __pycache__/
 *.pyc
 chroma_db/
+conversation_memory.db
 knowledge_base/chat_*.txt
